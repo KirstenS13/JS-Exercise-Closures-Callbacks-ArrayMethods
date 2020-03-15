@@ -224,8 +224,10 @@ function removeApple(strings) {
  * 
  * [2] Invoking `stringSmash` with `['a', 'b', 'c' ]` will return `abc`.
 */
-function stringSmash(/* code here */) {
-  /* code here */
+function stringSmash(strings) {
+  return strings.reduce((accumulator, arrItem) => {
+    return accumulator + arrItem;
+  });
 }
 
 // A local community center is holding a fund raising 5k fun run and has invited

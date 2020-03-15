@@ -203,8 +203,10 @@ function isItAnApple(strings) {
  * 
  * [2] Invoking `removeApple` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
 */
-function removeApple(/* code here */) {
-  /* code here */
+function removeApple(strings) {
+  return strings.filter((arrItem) => {
+    return (arrItem !== 'apple');
+  });
 }
 
 /**

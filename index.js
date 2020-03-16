@@ -371,11 +371,14 @@ function counter2() {
 function counterMakerWithLimit(limit) {
   let count = 0;
   if (count < limit) {
-    return function counter1(){
+    return function counter1() {
       return count++;
     }
   } else {
-    return count = 0;
+    const reset = function() {
+      return count = 0;
+    }
+    reset();
   }
 }
 

@@ -313,9 +313,16 @@ function tallyUpDonations(/* CODE HERE */) {
  * 
  * 1. What is the difference between counter1 and counter2?
  * 
+ *    Counter1 defined the variable <count> in the function scope, which means that the value of <count> cannot be changed in the global scope. It can only be changed by calling the <counterMaker> funtion. Counter2 defined the variable <count> in the global scope, which means the value can be changed by simply redefining the value.
+ * 
  * 2. Which of the two uses a closure? How can you tell?
  * 
+ *    Counter1 uses a closure. I can tell because counter1 involves a function nested inside another function, where the inner function reaches out of its local scope to get a variable from the outer function's scope.
+ * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
+ * 
+ *    Counter1 would be preferable for keeping score in a game, because the <count> variable is protected. It would make sure that the score only went up when <counterMaker> was called.
+ *    Counter2 would be preferable when <count> needs to be accessed by multiple functions that do not share the same scope.
  *
 */
 

@@ -368,8 +368,15 @@ function counter2() {
  * counter() // should return 0
  * etc
 */
-function counterMakerWithLimit(/* CODE HERE */) {
-  /* CODE HERE */
+function counterMakerWithLimit(limit) {
+  let count = 0;
+  if (count < limit) {
+    return function counter1(){
+      return count++;
+    }
+  } else {
+    return count = 0;
+  }
 }
 
 /////////////// END OF CHALLENGE ///////////////
